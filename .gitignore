@@ -1,0 +1,7 @@
+# ignore ALL .log files and .coveralls.yml
+*.log
+.coveralls.yml
+
+# ignore ALL files in ANY directory named node_modules and temp/
+temp/ 
+node_modules/debug/
