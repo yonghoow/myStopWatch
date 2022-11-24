@@ -1,34 +1,181 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
     <body>
+    <div class="jumbotron text-center">
+        <h1>Prefill Google form</h1>
+        <h2>Your location</h2>
 
-        <h1>JavaScript Dates</h1>
-        <h2>Using new Date()</h2>
-        <p>Create a new date object with the current date and time:</p>
+	<form>
+            Select your name:
+                <select id="mySelectName">
+                    <option value="Yong Hoow">Yong Hoow</option>
+                    <option value="Adam">Adam</option>
+                    <option value="Kok Foo">Kok Foo</option>
+                    <option value="Firdaus">Firdaus</option>
+		    <option value="Hidayat">Hidayat</option>
+		    <option value="John Teo">John Teo</option>
+		    <option value="Karen Tan">Karen</option>
+		    <option value="Kok Kee">Kok Kee</option>
+		    <option value="Margaret">Margaret</option>
+		    <option value="Ming En">Ming En</option>
+		    <option value="Sabrina">Sabrina</option>
+		    <option value="Siti">Siti</option>		    
+                </select>
+        </form>
 
-        <button onclick="displayTime()">Scan passport</button>
+	<form>
+            Location:
+                <select id="mySelectLocation">
+                    <option value="TMFT">TMFT</option>
+                    <option value="MBCCS">MBCCS</option>
+                    <option value="SCC">SCC</option>
+                </select>
+        </form>
 	
-	<p id="demo"></p>
+	<form>
+            Hall:
+                <select id="mySelectHall">
+                    <option value="Arrival">Arrival</option>
+                    <option value="Departure">Departure</option>
+                </select>
+        </form>
 	
-	<button onclick="displayTime2()">Entry gate opened</button>
+	<form>
+            Lane:
+                <select id="mySelectLane">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+		    <option value="3">3</option>
+                    <option value="4">4</option>
+		    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+		    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                </select>
+        </form>
+	
+	<form>
+            Previous Traveller inside lane:
+                <select id="mySelectTravellerInside">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+        </form>
+
+	<h2>Start timing</h2>
+
+	<button onclick="displayTime()">Scan passport</button>
+
+        <p id="demo"></p>
+
+        <button onclick="displayTime2()">Entry gate opened</button>
 
         <p id="demo2"></p>
 
-	<button onclick="displayTime3()">Entry gate closed</button>
-	
-	<p id="demo3"></p>
+        <button onclick="displayTime3()">Entry gate closed</button>
 
-	<button onclick="displayTime4()">Exit gate opened</button>
+        <p id="demo3"></p>
+
+        <button onclick="displayTime4()">Exit gate opened</button>
+
+        <p id="demo4"></p>
+
+	<h2>Traveller's description</h2>
+
+	<form>
+            Traveller Height:
+                <select id="mySelectTravellerHeight">
+                    <option value="<1.50"><1.50</option>
+                    <option value="1.60 to 1.64">1.60 to 1.64</option>
+		    <option value="1.65 to 1.69">1.65 to 1.69</option>
+		    <option value="1.70 to 1.74">1.70 to 1.74</option>
+		    <option value="1.75 to 1.79">1.75 to 1.79</option>
+		    <option value="1.80 to 1.85">1.80 to 1.85</option>
+                </select>
+        </form>
+
+	<form>
+            Age:
+                <select id="mySelectAge">
+		    <option value="< 15"><15</option>
+                    <option value="16 to 20">16 to 20</option>
+                    <option value="21 to 25">21 to 25</option>
+                    <option value="26 to 30">26 to 30</option>
+                    <option value="31 to 36">31 to 36</option>
+                    <option value="37 to 42">37 to 42</option>
+		    <option value="43 to 50">43 to 50</option>
+		    <option value="51 to 60">51 to 60</option>
+		    <option value="61 to 68">61 to 68</option>
+		    <option value="> 70">>70</option>
+                </select>
+        </form>
+
+	<form>
+            IRIS attempt:
+                <select id="mySelectIris">
+                    <option value="1st">1st</option>
+                    <option value="2nd">2nd</option>
+                    <option value="Not Sure">Not Sure</option>
+                </select>
+        </form>
+
+	<form>
+            FB attempt:
+                <select id="mySelectFb">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="No FB Captured">No FB Captured</option>
+                </select>
+        </form>
+
+	<form>
+            Wear Cap / Headgear:
+                <select id="mySelectCap">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+        </form>
+
+	<form>
+            Wear Cap / Headgear 1st attempt:
+                <select id="mySelectCap1st">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+        </form>
+
+	<form>
+            Wear Cap / Headgear 2nd attempt:
+                <select id="mySelectCap2nd">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+        </form>
 	
-	<p id="demo4"></p>
+	<p>Use button below to fill up google form</p>
+
+	<button onclick="submitForm()">Fill up Google form</button>
+    </div>
 	
-	<button onclick="submitForm()">Submit to Google form</button>
-	
-	<!--<script src='/javascripts/stopwatch.js'></script>-->
-	<script src = "/javascripts/beginTime.js"></script>
-	<script src = "/javascripts/entryOpenTime.js"></script>
-	<script src = "/javascripts/entryCloseTime.js"></script>
-	<script src = "/javascripts/exitOpenTime.js"></script>
-	<script src = "/javascripts/urltoform.js"></script>
+	<script src = "beginTime.js"></script>
+	<script src = "entryOpenTime.js"></script>
+	<script src = "entryCloseTime.js"></script>
+	<script src = "exitOpenTime.js"></script>
+	<script src = "urltoform.js"></script>
     </body>
 </html>
