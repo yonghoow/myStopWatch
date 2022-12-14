@@ -19,16 +19,16 @@ let baggageprefix = '&entry.1095819260=';
 var myBaggage = 'Yes';
 let irisprefix = '&entry.2075619033=';
 var myIris;
-let fbprefix = '&entry.1751873266=';
-var myFb;
+let fpprefix = '&entry.1751873266=';
+var myFp;
 let maskprefix = '&entry.2086046119=';
 var myMask = 'Yes';
 let mask1stprefix = '&entry.1669305542=';
 var myMask1st = 'No';
 let mask2ndprefix = '&entry.1385705137=';
-var myMask2nd = 'No';
+var myMask2nd;
 let spectaclesprefix = '&entry.736465663=';
-var mySpectacles = 'No';
+var mySpectacles;
 let capprefix = '&entry.9993390=';
 var myCap;
 let capprefix1st = '&entry.1261226136=';
@@ -61,17 +61,39 @@ function submitForm() {
     myTravellerInside = document.getElementById("mySelectTravellerInside").value;
     myTravellerHeight = document.getElementById("mySelectTravellerHeight").value;
     myAge = document.getElementById("mySelectAge").value;
-    myIris = document.getElementById("mySelectIris").value;
-    myFb = document.getElementById("mySelectFb").value;
+    if (exitOpenTimeLapsed > 15) {
+        myIris = "2nd";
+    } else if (exitOpenTimeLapsed < 16) {
+	myIris = "1st";
+    }
+
+    if (exitOpenTimeLapsed > 29) {
+	myFp = "Yes";
+    } else if (exitOpenTimeLapsed < 30) {
+	myFp = "No";
+    }
+
+    if (exitOpenTimeLapsed > 15) {
+        myMask2nd = "No";
+    } else {
+	myMask2nd = "N/A";
+    }
+
+    mySpectacles = document.getElementById("mySelectSpectacles").value;
     myCap = document.getElementById("mySelectCap").value;
     myCap1st = document.getElementById("mySelectCap1st").value;
-    myCap2nd = document.getElementById("mySelectCap2nd").value;
+
+    if (exitOpenTimeLapsed < 16) {
+	myCap2nd = "N/A";
+    } else {
+        myCap2nd = myCap1st;
+    }
     window.open(
 	beginUrl + nameprefix + myName + locationprefix + myLocation + 
 	hallprefix + myHall + wingprefix + myWing + laneprefix + myLane + 
 	travellerinsideprefix + myTravellerInside + travellerheightprefix + myTravellerHeight +
 	ageprefix + myAge + baggageprefix + myBaggage + irisprefix + myIris + 
-	fbprefix + myFb + maskprefix + myMask + mask1stprefix + myMask1st + 
+	fpprefix + myFp + maskprefix + myMask + mask1stprefix + myMask1st + 
 	mask2ndprefix + myMask2nd + spectaclesprefix + mySpectacles +
 	capprefix + myCap + capprefix1st + myCap1st + capprefix2nd + myCap2nd + 
 	tascentprefix + myTascent + stickerprefix + mySticker + 
